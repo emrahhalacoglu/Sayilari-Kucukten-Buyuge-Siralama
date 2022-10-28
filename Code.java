@@ -2,14 +2,14 @@ import java.util.Scanner;
 public class Code{
     public static void main(String[] args) {
         double a,b,c;
-        Scanner input=new Scanner(System.in);
-        System.out.print("ilk sayiyi giriniz. : ");
-        a=input.nextDouble();
-        System.out.print("ikinci sayiyi giriniz. : ");
-        b=input.nextDouble();
-        System.out.print("ucuncu sayiyi giriniz. : ");
-        c=input.nextDouble();
-        
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("ilk sayiyi giriniz. : ");
+            a=input.nextDouble();
+            System.out.print("ikinci sayiyi giriniz. : ");
+            b=input.nextDouble();
+            System.out.print("ucuncu sayiyi giriniz. : ");
+            c=input.nextDouble();
+        }
         if((a==b)||(b==c)||(a==c)){System.out.println("*ERROR!\nLutfen birbirinden farkli sayiler giriniz!");}else{
             if(a<b&&a<c){
             if(b<c){
